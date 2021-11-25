@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>素数质数</title>
+    <script>
+        function isnumber(b) {
+
+            for (var i = 2; i < b; i++) {
+                if (b % i == 0) {
+
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }
+        }
+        while (true) {
+            var num1 = parseInt(prompt('请输入第一个数字'));
+            alert(isnumber(num1));
+            // console.log(isnumber(num1));
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

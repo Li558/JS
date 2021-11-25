@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //数组[1500,1200,2000,2100,1800], 要求 吧数组中工资超过2000的都删除 剩余放到新数组当中
+        var arr = new Array(1500, 1200, 2000, 2100, 1800);
+        var brr = new Array();
+        for (var i = 0; i <= arr.length - 1; i++) {
+            if (arr[i] < 2000) {
+
+                brr.push(arr[i]);
+
+            }
+        }
+        console.log(arr);
+        console.log(brr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

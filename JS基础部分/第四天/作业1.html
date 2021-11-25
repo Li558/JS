@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器</title>
+    <script>
+        while (true) {
+            var num1 = parseFloat(prompt('请输入第一个数字'));
+            var str = prompt('请输入运算符');
+            var num2 = parseFloat(prompt('请输入第二个数字'));
+            switch (str) {
+                case '+':
+                    alert(num1 + num2);
+                    break;
+                case '-':
+                    alert(num1 - num2);
+                    break;
+                case '*':
+                    alert(num1 * num2);
+                    break;
+                case '/':
+                    alert(num1 / num2);
+                    break;
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
