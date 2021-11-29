@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        //鼠标事件对象  MouseEvent
+        document.addEventListener('click', function(e) {
+            //1 clientX 鼠标在可视区的x和y的坐标
+            // console.log(e);
+
+            console.log(e.clientX);
+            console.log(e.clientY);
+            console.log('-------------------');
+            //2 page 鼠标在页面文档的x和y的坐标
+            // console.log(e);
+            console.log(e.pageX);
+            console.log(e.pageY);
+            console.log('-------------------');
+            // 3 screen 鼠标相当于电脑屏幕X坐标
+            console.log(e.screenX);
+            console.log(e.screenY);
+            console.log('-------------------');
+        })
+    </script>
+</body>
+
+</html>

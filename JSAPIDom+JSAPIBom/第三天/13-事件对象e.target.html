@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>123</div>
+    <ul>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+    </ul>
+    <script>
+        //常见事件对象 的属性和方法
+        //e.target 触发事件的对象   this返回的是绑定事件的对象
+        //区别：e.target点击了那个元素，就返回那个元素  this 那个元素绑定了这个点击事件，那么就返回谁
+        var div = document.querySelector('div');
+        div.addEventListener('click', function(e) {
+            //e.target 触发事件的对象
+            console.log(e.target);
+            //this返回的是绑定事件的对象
+            console.log(this);
+        })
+        var ul = document.querySelector('ul');
+        ul.addEventListener('click', function(e) {
+                //我们给ul 绑定了事件  那么this 就指向了ul
+                console.log(this);
+                //e.target 指向我们点击的那么对象 谁触发了这个事件 我们带年纪的li e.target 指向的是li
+                console.log(e.target);
+            })
+            //了解兼容性
+            // div.onclick = function(e){
+            //     e = e || window.event;
+            //     var target = e.target || e.srcElement;
+            //     console.log(target);
+            // }
+    </script>
+    // 2 了解 跟this 有个非常相似的属性 currentTarget
+</body>
+
+</html>

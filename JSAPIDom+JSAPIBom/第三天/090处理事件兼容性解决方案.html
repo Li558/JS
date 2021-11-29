@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function addEventListener(element, eventName, fn) {
+            //判断当前浏览器是否支持addEventListener方法
+            if (element.addEventListener) {
+                element.addEventListener(eventName, fn);
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + eventName, fn);
+            } else {
+                //相当于element.onclick = fn;
+                element['on' + eventName] = fn;
+            }
+        }
+    </script>
+</body>
+
+</html>
