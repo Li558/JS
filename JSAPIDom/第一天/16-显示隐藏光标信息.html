@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        color: #999;
+    }
+</style>
+
+<body>
+    <input type="text " value="手机">
+
+    <script>
+        // 首先表单需要2个新事件，获得焦点Onfocus 失去焦点onblur
+
+        //1 获取元素
+        var text = document.querySelector('input');
+        //2 注册事件 获得焦点事件 onfocus
+        text.onfocus = function() {
+                // console.log('得到了焦点');
+                if (this.value === '手机') {
+                    this.value = '';
+                }
+                //获得焦点 需要本文本框里面的颜色变黑
+                this.style.color = '#333';
+            }
+            //3 注册事件 失去焦点 事件onblur
+        text.onblur = function() {
+            if (this.value === '') {
+                this.value = '手机';
+            }
+        }
+    </script>
+</body>
+
+</html>

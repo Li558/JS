@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    div {
+        width: 500px;
+        margin: 0 auto;
+    }
+    
+    .Tes {
+        float: left;
+        width: 150px;
+        height: 30px;
+        border: 1px solid #ccc;
+        color: #ccc;
+    }
+    
+    .Pad {
+        float: left;
+        width: 150px;
+        height: 30px;
+        border: 1px solid #ccc;
+        color: #ccc;
+        margin-left: 20px;
+    }
+    
+    _border {
+        border: 1px solid pink;
+    }
+</style>
+
+<body>
+    <div>
+        <input type="text" class="Tes" value="用户名">
+        <input type="passward" class="Pad" value="密码">
+    </div>
+    <script>
+        //获取事件源
+        var Tes = document.querySelector('.Tes');
+        var Pad = document.querySelector('.Pad');
+        //注册事件
+        Tes.onfocus = function() {
+            if (this.value === '用户名') {
+                this.value = '';
+            }
+        }
+        Tes.onblur = function() {
+            if (this.value === '') {
+                this.value = '用户名';
+            }
+            this.className = 'Tes _border';
+        }
+        Pad.onfocus = function() {
+            if (this.value === '密码') {
+                this.value = '';
+            }
+        }
+        Pad.onblur = function() {
+            if (this.value === '') {
+                this.value = '密码';
+            }
+            this.className = 'Pad _border';
+        }
+    </script>
+</body>
+
+</html>
