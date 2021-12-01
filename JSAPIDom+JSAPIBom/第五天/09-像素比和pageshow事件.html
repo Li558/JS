@@ -6,18 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="flexible.js"></script>
 </head>
 
 <body>
-    <a href="index.html">点击我去列表页面</a>
-    <button>后退</button>
     <script>
-        var btn = document.querySelector('button');
-        btn.addEventListener('click', function() {
-            // history.back();
-            history.go(-1);
+        // console.log(window.devicePixelRatio);
+        window.addEventListener('load', function() {
+            alert(11);
         })
     </script>
+    <a href="http://www.itcast.cn">链接</a>
 </body>
 
 </html>
