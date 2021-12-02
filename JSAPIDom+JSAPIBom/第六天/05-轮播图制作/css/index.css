@@ -26,8 +26,8 @@
     float: left;
 }
 
-.arrow-l,
-.arrow-r {
+.arrow_l,
+.arrow_r {
     display: none;
     position: absolute;
     top: 50%;
@@ -43,7 +43,7 @@
     z-index: 2;
 }
 
-.arrow-r {
+.arrow_r {
     right: 0;
 }
 
