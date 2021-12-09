@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    woshi body 的文字
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <script>
+        $(function() {
+            //1 隐式迭代  给所有的按钮都绑定了点击事件
+            $("button").click(function() {
+                //2 让当前元素颜色变为红色
+                // $(this).css("background", "pink");
+                //3 让其余姐妹不变色
+                // $(this).siblings().css("background", "");
+
+                //链式编程  很优雅 我的颜色变为红色  我兄弟的颜色变为空
+                // $(this).css("background", "pink").siblings().css("background", "");
+                // 我的兄弟变为红色   我本身不变色
+                // $(this).siblings().css('color', 'red');
+
+                //兄弟的爸爸body 变颜色
+                $(this).siblings().parent().css('color', 'red');
+
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>
