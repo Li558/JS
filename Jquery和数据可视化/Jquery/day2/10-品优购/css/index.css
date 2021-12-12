@@ -1,0 +1,313 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?tomleg');
+    src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?tomleg') format('truetype'), url('../fonts/icomoon.woff?tomleg') format('woff'), url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+
+/* <!-- 首页专有的模块main start --> */
+
+.main {
+    width: 980px;
+    height: 455px;
+    /* margin-right: 0; */
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+.focus {
+    float: left;
+    width: 721px;
+    height: 455px;
+}
+
+.newsflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+
+.news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+
+.news-hd {
+    height: 33px;
+    line-height: 33px;
+    border: 1px dotted #e4e4e4;
+    padding: 0 15px;
+}
+
+.news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+
+.news-hd .more {
+    float: right;
+}
+
+.news-hd .more::after {
+    font-family: 'icomoon';
+    content: '\e920';
+}
+
+.news-bd {
+    padding: 5px 15px 0;
+}
+
+.news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.lifeservice {
+    overflow: hidden;
+    height: 209px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+}
+
+.lifeservice ul {
+    width: 252px;
+}
+
+.lifeservice ul li {
+    float: left;
+    position: relative;
+    /* width: 25%; */
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+.lifeservice ul li img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.lifeservice ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    /* background: url(../images/icons.png) no-repeat -17px -16px; */
+    margin-top: 12px;
+}
+
+.lifeservice .xiaotubiao1 {
+    background: url(../images/icons.png) no-repeat -17px -16px;
+}
+
+.lifeservice .xiaotubiao2 {
+    background: url(../images/icons.png) no-repeat -77px -16px;
+}
+
+.lifeservice .xiaotubiao3 {
+    background: url(../images/icons.png) no-repeat -140px -16px;
+}
+
+.lifeservice .xiaotubiao4 {
+    background: url(../images/icons.png) no-repeat -205px -16px;
+}
+
+.lifeservice .xiaotubiao5 {
+    background: url(../images/icons.png) no-repeat -17px -86px;
+}
+
+.lifeservice .xiaotubiao6 {
+    background: url(../images/icons.png) no-repeat -77px -86px;
+}
+
+.lifeservice .xiaotubiao7 {
+    background: url(../images/icons.png) no-repeat -140px -86px;
+}
+
+.lifeservice .xiaotubiao8 {
+    background: url(../images/icons.png) no-repeat -205px -86px;
+}
+
+.lifeservice .xiaotubiao9 {
+    background: url(../images/icons.png) no-repeat -17px -158px;
+}
+
+.lifeservice .xiaotubiao10 {
+    background: url(../images/icons.png) no-repeat -77px -158px;
+}
+
+.lifeservice .xiaotubiao11 {
+    background: url(../images/icons.png) no-repeat -140px -158px;
+}
+
+.lifeservice .xiaotubiao12 {
+    background: url(../images/icons.png) no-repeat -205px -158px;
+}
+
+.bargain {
+    margin-top: 5px;
+}
+
+
+/* <!-- 首页专有的模块main end --> */
+
+
+/* <!-- 推荐模块 start --> */
+
+.recom {
+    height: 163px;
+}
+
+.recom_hd {
+    float: left;
+    width: 205px;
+    height: 163px;
+    background-color: #5c5251;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.recom_bd {
+    float: left;
+}
+
+.recom_bd ul li {
+    float: left;
+    position: relative;
+}
+
+.recom_bd ul li img {
+    width: 248px;
+    height: 163px;
+}
+
+.recom_bd ul li:nth-child(-n+3)::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+}
+
+
+/* <!-- 推荐模块 end --> */
+
+
+/* <!-- 猜你喜欢模块 start--> */
+
+
+/* <!-- 猜你喜欢模块 end--> */
+
+
+/* <!-- 楼城区制作 start --> */
+
+.box_hd {
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+    margin-top: 25px;
+}
+
+.box_hd h3 {
+    float: left;
+    font-size: 18px;
+    color: #c81623;
+}
+
+.tab_list {
+    float: right;
+}
+
+.tab_list ul li {
+    float: left;
+}
+
+.tab_list ul li a {
+    margin: 0 10px;
+}
+
+.box_bd {
+    height: 361px;
+}
+
+.tab_list_item>div {
+    float: left;
+}
+
+.col_210 {
+    width: 210px;
+    height: 361px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.col_210 ul {
+    padding-left: 12px;
+}
+
+.col_210 ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 34px;
+    margin-right: 10px;
+}
+
+.col_329 {
+    width: 329px;
+}
+
+.col_221 {
+    width: 221px;
+}
+
+.col_219 {
+    width: 219px;
+}
+
+.bb {
+    /* 一般情况下 a如果包含有宽度的盒子，a需要转化为块级元素 */
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* <!-- 楼城区制作 end --> */
+
+
+/*电梯导航*/
+
+.fixedtool {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    margin-left: -676px;
+    width: 66px;
+    background-color: #fff;
+    display: none;
+}
+
+.fixedtool li {
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.fixedtool .current {
+    background-color: #c81623;
+    color: #fff;
+}
