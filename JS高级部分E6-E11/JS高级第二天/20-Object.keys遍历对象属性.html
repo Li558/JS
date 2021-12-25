@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 用于获取对象自身所有的属性
+        var obj = {
+            id: 1,
+            pname: '小米',
+            price: 1999,
+            num: 2000
+        };
+        //1 之前的对象添加和修改属性的方式
+        // obj.num = 1000;
+
+        //2 Object.defineProperty()定义新属性或修改原有的属性
+        Object.defineProperty(obj, 'num', {
+            value: 1000
+        })
+        Object.defineProperty(obj, 'price', {
+            value: 19999
+        })
+        Object.defineProperty(obj, 'id', {
+            //不允许修改该值
+            writable: false
+        })
+        obj.id = 2;
+        console.log(obj);
+    </script>
+</body>
+
+</html>
