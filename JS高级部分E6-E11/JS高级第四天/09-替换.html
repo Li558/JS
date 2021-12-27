@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        textarea {
+            width: 300px;
+            height: 100px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="message"></textarea> <button>提交</button>
+    <div></div>
+    <script>
+        // //替换 replace
+        // var str = 'andy和red';
+        // // var newStar = str.replace('andy', 'baby');
+        // var newStar = str.replace(/andy/, 'baby');
+        // console.log(newStar);
+        var text = document.querySelector('textarea');
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        // g全局匹配   i 忽略大小写  gi 全局匹配+忽略大小写
+        btn.onclick = function() {
+            div.innerHTML = text.value.replace(/激情|gay/g, '**');
+        }
+
+        //
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+/* 列表页专属的css */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?tomleg');
+    src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?tomleg') format('truetype'), url('../fonts/icomoon.woff?tomleg') format('woff'), url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    /* IE6、7独有 */
+    *zoom: 1;
+}
+
+.nav {
+    overflow: hidden;
+}
+
+.sk {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #c81523;
+    padding: 3px 0 0 14px;
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+}
+
+.sk_list ul li a {
+    display: block;
+    line-height: 47px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.sk_con {
+    float: left;
+}
+
+.sk_con ul li {
+    float: left;
+}
+
+.sk_con ul li a {
+    display: block;
+    line-height: 49px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.sk_con ul li:last-child a::after {
+    font-family: 'icomoon';
+    content: '\e91e';
+}
+
+.sk_bd ul li {
+    float: left;
+    width: 290px;
+    height: 460px;
+    padding: 0 1px;
+    border: 1px solid transparent;
+}
+
+.sk_bd ul li:hover {
+    border: 1px solid red;
+}
+
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.sk_bd ul li img {
+    width: 100%;
+}
+
+.sk_bd ul li h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #a3a3a3;
+}
+
+.jiaqian {
+    width: 100%;
+    height: 25px;
+    margin: 10px;
+    font-size: 14px;
+    color: red;
+}
+
+.jiaqian .first {
+    font-size: 22px;
+}
+
+.jiaqian .second {
+    color: blue";
+
+}
+
+.bigbox {
+    width: 100%;
+    height: 18px;
+    margin-bottom: 14px;
+    line-height: 18px;
+}
+
+.bigbox .left {
+    float: left;
+    line-height: 18px;
+    font-size: 14px;
+    color: #747474;
+}
+
+.bigbox .bar {
+    float: left;
+    width: 132px;
+    height: 12px;
+    margin-left: 26px;
+    background-color: pink;
+    border-radius: 6px;
+    margin-top: 3px;
+}
+
+.bigbox .bar_in {
+    width: 50%;
+    height: 12px;
+    background-color: red;
+    border-radius: 6px;
+    transition: all .5s ease;
+}
+
+.bar_in:hover {
+    width: 100%;
+}
+
+.bigbox .right {
+    float: right;
+    font-size: 14px;
+    color: #747474;
+}
+
+.liji {
+    width: 100%;
+    height: 50px;
+    background-color: #b1191a;
+    line-height: 50px;
+    text-align: center;
+}
+
+.liji a {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
