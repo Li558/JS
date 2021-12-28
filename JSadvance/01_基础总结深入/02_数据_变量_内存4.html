@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        在js调用函数时传递变量参数时, 是值传递还是引用传递*
+            *.理解1: 都是值(基本/地址值)传递
+            *.所以实际上传进function中的参数也是拿着其存着的地址值找内存
+    -->
+</head>
+
+<body>
+    <script>
+        var a = 3;
+
+        function fn(a) {
+            a = a + 1;
+        }
+        fn(a);
+        console.log(a);
+
+        function fn2(obj) {
+            console.log(obj.name);
+        }
+        var obj = {
+            name: 'Tom'
+        };
+        fn2(obj);
+        let a = {
+            name: 'hong'
+        }
+        const fn2 = (obj) => obj.age = 15
+        fn2(a)
+        console.log(a.age) //15
+    </script>
+</body>
+
+</html>

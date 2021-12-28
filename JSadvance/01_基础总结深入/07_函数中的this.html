@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        this是什么?
+            * 任何函数本质上都是通过某个对象来调用的,如果没有直接指定就是window
+            * 所有函数内部都有一个变量this
+            * 它的值是`调用函数的当前对象`
+        如何确定this的值?*
+            * test(): window
+            * p.test(): p
+            * new test(): 新创建的对象
+            * p.call(obj): obj
+     -->
+</head>
+
+<body>
+    <script>
+        //
+        function Person(color) {
+            console.log(this)
+            this.color = color;
+            this.getColor = function() {
+                console.log(this)
+                return this.color;
+            };
+            this.setColor = function(color) {
+                console.log(this)
+                this.color = color;
+            };
+        }
+        Person("red"); //this是谁? window
+
+        const p = new Person("yello"); //this是谁? p
+
+        p.getColor(); //this是谁? p
+
+        const obj = {};
+        //调用call会改变this指向-->让我的p函数成为`obj`的临时方法进行调用
+        p.setColor.call(obj, "black"); //this是谁? obj
+
+        const test = p.setColor;
+        test(); //this是谁? window  -->因为直接调用了
+
+        function fun1() {
+            function fun2() {
+                console.log(this);
+            }
+            fun2(); //this是谁? window
+        }
+        fun1(); //调用fun1
+    </script>
+</body>
+
+</html>

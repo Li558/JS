@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        undefined与null的区别?
+            1.undefined代表定义未赋值
+            2.nulll定义并赋值了, 只是值为null 
+        什么时候给变量赋值为null呢?
+            1.初始赋值, 表明将要赋值为对象,`可以用做约定俗成的占位符`
+            2.结束前, 让对象成为垃圾对象(被垃圾回收器回收)
+
+        严格区别变量类型与数据类型?
+            1.数据的类型
+            2.基本类型
+            3.对象类型
+            4.变量的类型(变量内存值的类型)
+            5.基本类型: 保存就是`基本类型`的数据
+            6.引用类型: 保存的是地址值(对象类型)
+        -->
+</head>
+
+<body>
+    <script>
+        //1
+        var a
+        console.log(a) // undefined
+        a = null
+        console.log(a) // null
+
+        //2
+        //起始,可以用做约定俗成的占位符
+        // var b = null // 初始赋值为null, 表明将要赋值为对象
+        //确定对象就赋值
+        // b = ['atguigu', 12]
+        //最后在不使用的时候,将其引用置空,就可以释放b这个对象占用的内存      ---当没有引用指向它的对象称为垃圾对象
+        // b = null // 让b指向的对象成为垃圾对象(被垃圾回收器回收)
+
+        //3
+        (function() {
+            // console.log('13' > '3'); // 输出：false
+            // console.log(5 > '6'); // 输出： false
+            console.log('d' > 'ABDC') // 输出： true
+                // console.log(19 > 'ssf') // 输出 false
+                // console.log('A' > 'abcdef') // 输出 false
+        })()
+    </script>
+</body>
+
+</html>

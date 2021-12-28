@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 
+    关于引用变量赋值问题
+        *.2个引用变量指向同一个对象, 通过一个变量修改对象内部数据, 另一个变量看到的是修改之后的数据
+        *.2个引用变量指向同一个对象, 让其中一个引用变量指向另一个对象, 另一引用变量依然指向前一个对象
+-->
+
+<body>
+    <script>
+        var obj1 = {
+            name: 'Tom'
+        };
+        var obj2 = obj1;
+        obj1.name = 'Jack';
+        console.log(obj2.name); //Jack
+        function fn(obj) {
+            obj.name = 'A'
+        }
+        fn(obj1);
+        console.log(obj2.name); //A
+
+
+        let a = {
+            age: 12
+        };
+        //此时是将a指向的地址值赋值给B,所以B此时也指向{age:12}这个内存
+        let b = a;
+        //此时重新创建了一个内存并让a指向它,所以此处a指向的是{name:'hong'},而b指向仍是刚开始的指向{age:12}
+        a = {
+            name: 'hong'
+        };
+        //此时a与b指向的内存已经不一样了,所以修改互不影响
+        b.age = 14;
+        console.log(b.age, a.name, a.age); // 14 hong undefined
+        //2个引用变量指向同一个对象, 让其中一个引用变量指向另一个对象, 另一引用变量依然指向前一个对象   -->所以 a 仍是  {name: 'hong'}
+        const fn2 = (obj) => obj = {
+            age: 15
+        };
+        fn2(a)
+        console.log(a.age); //undefined
+    </script>
+</body>
+
+</html>

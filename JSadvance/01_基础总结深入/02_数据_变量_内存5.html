@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+         JS引擎如何管理内存?
+            1. 内存生命周期
+                * 分配小内存空间, 得到它的使用权
+                * 存储数据, 可以反复进行操作
+                * 释放小内存空间
+            2. 释放内存
+                * 局部变量: 函数执行完自动释放
+                * 对象: 成为垃圾对象==>垃圾回收器回收
+     -->
+</head>
+
+<body>
+    <script>
+        var a = 3;
+        var obj = {};
+        obj = undefined; //此时,obj没有被释放,但是之前声明的`{name:"hong"}`由于没有人指向它,会在后面你某个时刻被垃圾回收器回收
+
+        function fn() {
+            var b = 4;
+        }
+        fn(); //b是自动释放, b所指向的对象是在后面的某个时刻由垃圾回收器回收
+    </script>
+</body>
+
+</html>
