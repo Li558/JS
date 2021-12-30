@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //
+        /*
+测试题1
+*/
+        function A() {}
+        A.prototype.n = 1
+        let b = new A()
+        A.prototype = {
+            n: 2,
+            m: 3
+        }
+        let c = new A()
+        console.log(b.n, b.m, c.n, c.m) // 1 undefined 2 3
+
+        //
+        /*
+测试题2
+*/
+        function F() {}
+        Object.prototype.a = function() {
+            console.log('a()')
+        }
+        Function.prototype.b = function() {
+            console.log('b()')
+        }
+
+        let f = new F()
+        f.a() //a()
+            // f.b() //f.b is not a function -->找不到
+        F.a() //a()
+        F.b() //b()
+
+        console.log(f)
+        console.log(Object.prototype)
+        console.log(Function.prototype)
+    </script>
+</body>
+
+</html>
