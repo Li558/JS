@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数实践</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: #58a;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ad"></div>
+    <script>
+        //需求1 点击div 2s 之后颜色返回【粉色】
+        //获取元素
+        let ad = document.getElementById('ad');
+        //绑定事件
+        ad.addEventListener("click", function() {
+            //保存this 的值
+            // let that = this
+            //定时器
+            setTimeout(() => {
+                //修改背景颜色
+                console.log(this);
+                //this 指向函数声明 所在作用域下的 this 该this 指向事件源ad
+                this.style.background = 'pink';
+            }, 2000);
+        })
+
+        //需求2 从数组中返回偶数的元素
+
+        const arr = [1, 6, 9, 10, 100, 25];
+        // const result = arr.filter(function(item) {
+        //     if (item % 2 === 0) {
+        //         return true;
+        //     } else {
+        //         return fasle;
+        //     }
+        // });
+        const result = arr.filter(item => item % 2 === 0 ? true : false);
+        const result = arr.filter(item => item % 2 === 0);
+        console.log(result);
+
+        //箭头函数 适合与 this无关的回调   定时器  数组的方法回调
+        //箭头函数不适合与this 有关的回调函数 事件回调
+        var obj = {
+                name: '尚硅谷',
+                getName: () => {
+                    this.name;
+                }
+            }
+            //只是说不适合  并不是不能
+    </script>
+</body>
+
+</html>

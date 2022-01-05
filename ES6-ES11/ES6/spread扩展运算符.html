@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扩展运算符</title>
+</head>
+
+<body>
+    <script>
+        // [...]扩展运算符[数组]转换为都好分隔的参数序列
+        //声明一个数组
+        const tfbodys = ['占山', '历史', '阿瓦达'];
+        //声明一个函数
+        function chunwan() {
+            console.log(arguments);
+        }
+        chunwan(tfbodys); //Argumentsp[array]
+        chunwan(...tfbodys); //Argumentsp[3]'占山', '历史', '阿瓦达'
+    </script>
+</body>
+
+</html>

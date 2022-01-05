@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迭代器</title>
+</head>
+
+<body>
+    <script>
+        //声明一个数组
+        const xiyou = ['一', '二', '三', '四'];
+
+        //使用for...of遍历数组
+        for (let v in xiyou) {
+            console.log(v); //打印序列号
+        }
+        for (let v of xiyou) {
+            console.log(v); //打印键值
+        }
+        console.log(xiyou);
+
+        let iterator = xiyou[Symbol.iterator]();
+
+        //调用对象的next方法
+        console.log(iterator);
+        console.log(iterator.next()); //{vaule : 一 done:false}
+        console.log(iterator.next()); //{vaule : 二 done:false}
+        console.log(iterator.next()); //{vaule : 三 done:false}
+        console.log(iterator.next()); //{vaule : 四 done:false}
+        console.log(iterator.next()); //{vaule : defined done:true}
+    </script>
+</body>
+
+</html>
