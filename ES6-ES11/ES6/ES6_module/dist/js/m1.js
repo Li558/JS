@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.teach = teach;
 //分别暴露
-var school = exports.school = '尚硅谷';
+var school = exports.school = '关公';
 
 function teach() {
     console.log("我们可以教给你开发技能");

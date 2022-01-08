@@ -9,7 +9,7 @@
 
 <body>
     <script>
-        //dot  .  元字符  除换行符以外的任意单个字符
+        //dot . 元字符 除换行符以外的任意单个字符
         let str = `
         <ul>
             <li>
@@ -28,13 +28,16 @@
         // const result = reg.exec(str);
         let result;
         let data = [];
-        while(result = reg.exec(str)){
-            data.push({title: result[1], time: result[2]});
+        while (result = reg.exec(str)) {
+
+            console.log(result);
+            data.push({
+                title: result[1],
+                time: result[2]
+            });
+            //输出结果
+            console.log(data);
         }
-        //输出结果
-        console.log(data);
-
-
     </script>
 </body>
 
