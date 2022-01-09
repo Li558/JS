@@ -81,9 +81,6 @@ Promise是Js是中进行异步编程的新的解决方案（旧的是谁？）
 
 ![2](https://raw.githubusercontent.com/Li558/JS/main/Promise%E6%95%99%E7%A8%8B/Photo/3.png)
 
-![5](Photo/5.png)
-
-![5](Photo/5.png)
 
 ## 第三章 自定义（手写）Promise
 
