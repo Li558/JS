@@ -8,7 +8,7 @@
 
 
 
-![image-20220109114532622](D:\FortEndFile\JS\JS\Promise教程\Photo\1.png)
+![2](.\Photo\1.png)
 
 ### 1.2 二种类型的回调函数
 
@@ -23,7 +23,7 @@
 
 2.  **例子: 定时器回调  /Ajax回调 /  Promise的成功|失败的回调**
 
-      ![2](D:\FortEndFile\JS\JS\Promise教程\Photo\2.png)
+   ![2](.\Photo\2.png)
 
 
 
@@ -78,7 +78,7 @@ Promise是Js是中进行异步编程的新的解决方案（旧的是谁？）
 
 #### 2.1.3.promise的基本流程
 
-   ![2](D:\FortEndFile\JS\JS\Promise教程\Photo\3.png)
+![2](.\Photo\3.png)
 
 ## 第三章 自定义（手写）Promise
 
