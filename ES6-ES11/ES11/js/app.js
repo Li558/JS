@@ -3,7 +3,10 @@
 const btn = document.getElementById('btn');
 
 btn.onclick = function(){
-    import('./hello.js').then(module => {
-        module.hello();
+    //动态引入
+    import('./hello.js').then(module =>{
+        console.log(module);
+        alert(11);
     });
 }
+//提高执行的效率

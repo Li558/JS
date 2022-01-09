@@ -19,17 +19,19 @@
         </ul>`;
 
         //声明正则
+        // const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/sg
         const reg = /<li>.*?<a>(.*?)<\/a>.*?<p>(.*?)<\/p>/sg
-
+          
         //调用方法
         const result = str.matchAll(reg);
+
+        console.log(result);
 
         // for(let v of result){
         //     console.log(v);
         // }
 
         const arr = [...result];
-
         console.log(arr);
 
 

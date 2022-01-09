@@ -9,20 +9,18 @@
     <script>
         // ?.
         function main(config){
-            // const dbHost = config && config.db && config.db.host;
-            const dbHost = config?.db?.host;
-
-            console.log(dbHost);
+        // const dbHost = config && config.db && config.db.host;
+        const dbHost = config?.db?.host;
+        console.log(dbHost);
         }
-
         main({
             db: {
-                host:'192.168.1.100',
+                host: '192.168.1.100',
                 username: 'root'
             },
             cache: {
                 host: '192.168.1.200',
-                username:'admin'
+                username: 'admin'
             }
         })
     </script>

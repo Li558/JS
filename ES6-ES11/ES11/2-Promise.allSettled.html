@@ -7,25 +7,26 @@
 </head>
 <body>
     <script>
-        //声明两个promise对象
+        //声明两个promise 对象
         const p1 = new Promise((resolve, reject)=>{
             setTimeout(()=>{
                 resolve('商品数据 - 1');
-            },1000)
+            },1000);
         });
 
         const p2 = new Promise((resolve, reject)=>{
             setTimeout(()=>{
-                resolve('商品数据 - 2');
-                // reject('出错啦!');
-            },1000)
+                // resolve('商品数据 - 2');
+                reject('出错了');
+            },1000);
         });
 
-        //调用 allsettled 方法
+        //调用 allsettled 方法  返回的都是成功的Promise 
         // const result = Promise.allSettled([p1, p2]);
-        
-        // const res = Promise.all([p1, p2]);
+        // console.log(result);
 
+        //只有全部成功  才会返回成功的Promise
+        const res = Promise.all([p1, p2]);
         console.log(res);
 
     </script>

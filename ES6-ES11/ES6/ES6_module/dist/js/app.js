@@ -20,18 +20,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-// const $ = require("jquery");
-//入口文件
+console.log(m1); //入口函数
 
 //模块引入
-(0, _jquery2.default)('body').css('background', 'pink');
 
-// console.log(m1);
-// console.log(m2);
-// console.log(m3);
+console.log(m2);
+console.log(m3);
 
 // m1.teach();
 // m2.findJob();
 // m3.default.change();
 
+
 //修改背景颜色为粉色
+//const $ require("jquery")
+(0, _jquery2.default)('body').css('background', 'pink');
