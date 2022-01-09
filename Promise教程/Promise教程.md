@@ -8,7 +8,7 @@
 
 
 
-![2](.\Photo\1.png)
+![2](https://raw.githubusercontent.com/Li558/JS/main/Promise%E6%95%99%E7%A8%8B/Photo/1.png)
 
 ### 1.2 二种类型的回调函数
 
@@ -22,8 +22,9 @@
 1.  **理解：不会立即执行，会放入回调队列中将来执行**
 
 2.  **例子: 定时器回调  /Ajax回调 /  Promise的成功|失败的回调**
+3.  
 
-   ![2](.\Photo\2.png)
+   ![2](https://raw.githubusercontent.com/Li558/JS/main/Promise%E6%95%99%E7%A8%8B/Photo/2.png)
 
 
 
@@ -78,7 +79,7 @@ Promise是Js是中进行异步编程的新的解决方案（旧的是谁？）
 
 #### 2.1.3.promise的基本流程
 
-![2](.\Photo\3.png)
+![2](https://raw.githubusercontent.com/Li558/JS/main/Promise%E6%95%99%E7%A8%8B/Photo/3.png)
 
 ![5](Photo/5.png)
 
