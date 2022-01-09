@@ -83,7 +83,7 @@ Promise是Js是中进行异步编程的新的解决方案（旧的是谁？）
 
 ![5](Photo/5.png)
 
-
+![5](Photo/5.png)
 
 ## 第三章 自定义（手写）Promise
 
