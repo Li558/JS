@@ -4,35 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Promise-封装__8-指定多个回调</title>
 </head>
 <body>
-    <script src="./lib/Promise.js"></script>
+    <script src="./promise.js"></script>
     <script>
-        const p = new Promise((resolve, reject)=>{
-            setTimeout(()=>{
-                resolve(1);//value 
-                // reject(2);//reason
-            }, 100);
+        let p = new Promise((resolve, reject)=>{
+            
+            setTimeout(() => {
+                // resolve('OK');
+                reject('error');
+            }, 1000);
         });
         p.then(
             value => {
-                console.log('onResolved1()', value);
+                console.log(value);
             },
             reason => {
-                console.log('onRejected1()', reason);
+                console.log(reason);
             }
         )
         p.then(
             value => {
-                console.log('onResolved2()', value);
-
+                alert(value);
             },
             reason => {
-                console.log('onRejected2()', reason);
-
+                alert(reason);
             }
         )
+        console.log(p);
     </script>
 </body>
 </html>

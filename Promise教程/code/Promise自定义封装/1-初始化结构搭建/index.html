@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise-封装__1-初始化结构搭建</title>
+</head>
+<body>
+    <script src="./promise.js"></script>
+    <script>
+        let p = new Promise((resolve, reject)=>{
+            
+            resolve(1);//value 
+                
+            
+        });
+        p.then(
+            value => {
+                console.log(value);
+            },
+            reason => {
+                console.log(reason);
+            }
+        )
+    </script>
+</body>
+</html>

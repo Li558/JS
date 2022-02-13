@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise-封装__17-class版本封装</title>
+</head>
+<body>
+    <script src="./promise.js"></script>
+    <script>
+        let p1 = new Promise((resolve, reject)=>{
+            reject('error');
+            console.log(111);
+        });
+        p1.then(value=>{
+            // console.log(value);
+            console.log(222);
+        },reason=>{
+            // console.log(reason);
+            console.log(444);
+        });
+       console.log(333);
+    </script>
+</body>
+</html>

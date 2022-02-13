@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise-封装__9-同步任务then 返回结果</title>
+</head>
+<body>
+    <script src="./promise.js"></script>
+    <script>
+        let p = new Promise((resolve, reject)=>{
+            
+            resolve('OK');
+            // reject('error');
+        });
+        const res = p.then(
+            value => {
+                // console.log(value);
+                // return new Promise((resolve, reject)=>{
+                //     // resolve("success");
+                //     // reject('oh on');
+
+                // })
+                //抛出异常
+                throw "FAIL";
+            },
+            reason => {
+                console.log(reason);
+            }
+        );
+        console.log(res);
+    </script>
+</body>
+</html>
