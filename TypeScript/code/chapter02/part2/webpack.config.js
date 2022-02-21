@@ -19,7 +19,8 @@ module.exports = {
 
         //告诉webpack不使用箭头函数
         environment: {
-            arrowFunction: false
+            arrowFunction: false,
+            const: false
         }
     },
 
@@ -27,43 +28,69 @@ module.exports = {
     module: {
         //指定要加载的规则
         rules: [{
-            //test指定的时规则生效的文件
-            test: /\.ts$/,
-            //要使用的loader
-            use: [
-                //配置babel
-                {
-                    //指定加载器
-                    loader: "babel-loader",
-                    //设置babel
-                    options: {
-                        //设置预定义的环境
-                        presets: [
-                            [
-                                //指定环境的插件
-                                "@babel/preset-env",
-                                //配置信息
-                                {
-                                    targets: {
-                                        //要兼容的目标浏览器
-                                        "chrome": "58",
-                                        "ie": "11"
-                                    },
-                                    //指定corejs的版本
-                                    "corejs": "3",
-                                    //使用corejs的方式 "usage" 表示按需加载
-                                    "useBuiltIns": "usage"
-                                }
+                //test指定的时规则生效的文件
+                test: /\.ts$/,
+                //要使用的loader
+                use: [
+                    //配置babel
+                    {
+                        //指定加载器
+                        loader: "babel-loader",
+                        //设置babel
+                        options: {
+                            //设置预定义的环境
+                            presets: [
+                                [
+                                    //指定环境的插件
+                                    "@babel/preset-env",
+                                    //配置信息
+                                    {
+                                        targets: {
+                                            //要兼容的目标浏览器
+                                            "chrome": "58",
+                                            "ie": "11"
+                                        },
+                                        //指定corejs的版本
+                                        "corejs": "3",
+                                        //使用corejs的方式 "usage" 表示按需加载
+                                        "useBuiltIns": "usage"
+                                    }
+                                ]
                             ]
-                        ]
-                    }
-                },
-                'ts-loader'
-            ],
+                        }
+                    },
+                    'ts-loader'
+                ],
 
-            //要排除的文件
-            exclude: /node-modules/
-        }]
+                //要排除的文件
+                exclude: /node-modules/
+            },
+            //设置less文件的处理
+            {
+                test: /\.less$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    //引入postcss
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            postcssOptions: {
+                                pligins: [
+                                    [
+                                        "postcss-preset-env",
+                                        {
+                                            browers: 'last 2 versions'
+                                        }
+                                    ]
+                                ]
+                            }
+                        }
+                    },
+                    "less-loader"
+                ]
+            }
+        ]
     },
     mode: "production",
     //配置webpack插件
