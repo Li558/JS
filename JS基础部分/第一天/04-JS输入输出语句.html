@@ -7,14 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        //输入框
-        prompt('请输入你的年龄')
+        // //输入框
+        // prompt('请输入你的年龄')
 
-        // 输出框
-        alert('计算的结果是')
+        // // 输出框
+        // alert('计算的结果是')
 
-        // 浏览器控制
-        console.log('程序员看到')
+        // // 浏览器控制
+        // console.log('程序员看到')
+        nums1 = [3]
+        nums2 = [-2,-1]
+        let array1 = []
+        nums1.forEach(function(value){
+        array1.push(value)
+        })
+        nums2.forEach(function(value){
+        array1.push(value)
+        })
+        array1 = array1.sort()
+        console.log(array1);
+        let n = array1.length
+        console.log(n);
+        console.log(Math.floor(n/2));
+        console.log('@@@');
+        if(n % 2){
+        console.log(array1[Math.floor(n/2)]); 
+        }
+        // else{
+        // console.log((array1[Math.floor(n/2)]+array1[Math.floor(n/2)-1]) / 2) 
+        // }
+
     </script>
 </head>
 
